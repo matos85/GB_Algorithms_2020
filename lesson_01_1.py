@@ -1,6 +1,7 @@
 '''
 https://drive.google.com/file/d/1CyjAuUME30JNKKWAO-QjsAFzzZJ4auEE/view?usp=sharing
 
+
 Задача №1
 ПНайти сумму и произведение цифр трехзначного числа, которое вводит пользователь.
 '''
