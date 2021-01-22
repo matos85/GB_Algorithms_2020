@@ -1,7 +1,6 @@
 '''
 https://drive.google.com/file/d/1CyjAuUME30JNKKWAO-QjsAFzzZJ4auEE/view?usp=sharing
 
-
 Задача №6
 Пользователь вводит номер буквы в алфавите. Определить, какая это буква.
 Примечания:
@@ -12,11 +11,8 @@ https://drive.google.com/file/d/1CyjAuUME30JNKKWAO-QjsAFzzZJ4auEE/view?usp=shari
 print('Введите номер искомой строчной буквы латинского алфавита')
 n = int(input('Введите номер буквы: '))
 number = n + 96
-if 96 < number:
-    if number < 123:
-        i = chr(number)
-        print(f'Номеру {n} соответствует буква: {i}')
-    else:
-        print('Строчных букв с таким номером нет')
+if 96 < number < 123:
+    i = chr(number)
+    print(f'Номеру {n} соответствует буква: {i}')
 else:
     print('Строчных букв с таким номером нет')
