@@ -16,10 +16,10 @@ k = random.randint(0, 100)
 i = 1
 while True:
     z = int(input(f'Попытка номер {i}.  Введите ваше число от 0 до 100: '))
-    if z < k:
-        print('Меньше')
+ if z < k:
+        print('Ваше число меньше')
     elif z > k:
-        print('Больше')
+        print('Ваше число больше')
     else:
         print('Угадали. Поздравляю вас')
         break
