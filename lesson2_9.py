@@ -5,11 +5,11 @@
 '''
 
 
-def summa(n):
+def amount(n):
     if n < 10:
         return n
     else:
-        return summa(n // 10) + n % 10
+        return amount(n // 10) + n % 10
 
 
 x = 0
@@ -20,7 +20,7 @@ while True:
     if n == 0:
         break
     else:
-        n = summa(n)
+        n = amount(n)
         if x < n:
             x = n
             print(x)
