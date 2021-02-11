@@ -63,11 +63,11 @@ for k, v in my_dict.items():
         else:
             if v[j] / 2 > m:
                 a = k
-    else:
-        n = len(v)
-        if num < n:
-            num = n
-            ln = v
-            a = k
+     # else:
+    #     n = len(v)
+    #     if num < n:
+    #         num = n
+    #         ln = v
+    #         a = k
 
 print(a)
