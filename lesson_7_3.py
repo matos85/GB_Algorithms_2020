@@ -21,8 +21,9 @@ m = int(input('Введите  число для расчета длины ма�
 # m = 15
 
 SIZE_N = 2 * m + 1
-MIN_ITEM = -10
-MAX_ITEM = 10
+MIN_ITEM = -1_000_000
+MAX_ITEM = 1_000_000
+
 mass = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE_N)]
 
 print(mass)
@@ -30,7 +31,6 @@ print('*' * 10)
 # автоматическая сортировка для самопроверки
 print(f'Автоматическая сортировака \n{sorted(mass)} для  удобства проверки ответа')
 print(f'Длина массива: {len(mass)}')
-
 
 print('*' * 10)
 # Решение задачи
@@ -44,26 +44,30 @@ for i in mass:
                 maxi -= 1
             if i > mass[z]:
                 mini -= 1
-        my_dict[i].append(maxi)
-        my_dict[i].append(mini)
+        my_dict[i].append(abs(maxi))
+        my_dict[i].append(abs(mini))
     if i > -1:
         for z in range(len(mass)):
             if i < mass[z]:
                 maxi += 1
             if i > mass[z]:
                 mini += 1
-        my_dict[i].append(maxi)
-        my_dict[i].append(mini)
+        my_dict[i].append(abs(maxi))
+        my_dict[i].append(abs(mini))
 
+num = 0
 for k, v in my_dict.items():
-
     for j in range(len(v)):
         if abs(v[j]) == m:
             a = k
+        else:
+            if v[j] / 2 > m:
+                a = k
     else:
-        if v[j] / 2 > m:
+        n = len(v)
+        if num < n:
+            num = n
+            ln = v
             a = k
-
-
 
 print(a)
