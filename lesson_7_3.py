@@ -61,7 +61,7 @@ for k, v in my_dict.items():
         if abs(v[j]) == m:
             a = k
     else:
-        if sum(v) / 2 > m:
+        if v[j] / 2 > m:
             a = k
 
 
