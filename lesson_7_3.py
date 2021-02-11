@@ -18,19 +18,22 @@ from collections import defaultdict
 my_dict = defaultdict(list)
 
 m = int(input('Введите  число для расчета длины массива: '))
+# m = 15
 
 SIZE_N = 2 * m + 1
-MIN_ITEM = -1_000_000
-MAX_ITEM = 1_000_000
+MIN_ITEM = -10
+MAX_ITEM = 10
 mass = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE_N)]
-
 
 print(mass)
 print('*' * 10)
 # автоматическая сортировка для самопроверки
 print(f'Автоматическая сортировака \n{sorted(mass)} для  удобства проверки ответа')
+print(f'Длина массива: {len(mass)}')
+
+
 print('*' * 10)
-# Решение задачи 
+# Решение задачи
 print('Поиск медианы')
 for i in mass:
     mini = 0
@@ -51,11 +54,16 @@ for i in mass:
                 mini += 1
         my_dict[i].append(maxi)
         my_dict[i].append(mini)
+
 for k, v in my_dict.items():
+
     for j in range(len(v)):
         if abs(v[j]) == m:
-            between = k
+            a = k
     else:
-        if len(v) / 2 > m:
-            between = k
-print(between)
+        if sum(v) / 2 > m:
+            a = k
+
+
+
+print(a)
