@@ -20,8 +20,8 @@ print(mass)
 
 
 def func(my_list):
-    for e in range(len(my_list)):
-        for i in range(len(my_list) - 1):
+    for e in range(len(my_list) - 1):
+        for i in range(len(my_list) - e - 1):
             if my_list[i] < my_list[i + 1]:
                 my_list[i], my_list[i + 1] = my_list[i + 1], my_list[i]
         print(my_list)
